@@ -14,6 +14,7 @@ app.set('PORT', process.env.PORT || 3000);
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('./views'));
+app.use(express.urlencoded({extended:false}));
 
 
 

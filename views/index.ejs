@@ -1,74 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%-include('templates/header')%>
 </head>
+
 <body>
 
     <h1>Personajes de Star Wars</h1>
-        <div class="card-body">
-            <%if(Object.keys(persons).length> 0 ){%>
-                <table class="table table-bordered">
-                    <thead>
-                        <th>Nombre</th>
-                        <th>Altura</th>
-                        <th>Peso</th>
-                        <th>Col Cabello</th>
-                        <th>Col Piel</th>
-                        <th>Col Ojos</th>
-                        <th>Año de Nacimiento</th>
-                        <th>Genero</th>
-                        <th>Planeta Oringen</th>
-                        <th>Especie</th>
-                    </thead>
-                    <tbody>
-                        <%persons.forEach(person=> { %>
-                            <tr>
-                                <td>
-                                    <%=person.name%>
-                                </td>
-                                <td>
-                                    <%=person.height%>
-                                </td>
-                                <td>
-                                    <%=person.mass%>
-                                </td>
-                                <td>
-                                    <%=person.hair_color%>
-                                </td>
-                                <td>
-                                    <%=person.skin_color%>
-                                </td>
-                                <td>
-                                    <%=person.eye_color%>
-                                </td>
-                                <td>
-                                    <%=person.birth_year%>
-                                </td>
-                                <td>
-                                    <%=person.gender%>
-                                </td>
-                                <td>
-                                    <%=person.homeworld%>
-                                </td>
-                                <td>
-                                    <%=person.species%>
-                                </td>
-                            </tr>
+    <div>
+        <div class="col-md-3">
+            <label for="planet" class="form-label">Buscar Planeta</label>
+            <input type="text" id="idUser" name="planet" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="specie" class="form-label">Planeta</label>
+            <select class="form-select" id="specie" name="specie">
+                <option selected disabled value="">Choose...</option>
+                <%if(species.size> 0 ){%>
+                    <% species.forEach(specie => { %>
+                        <option><%=specie%></option>
+                    <%})%>
+                <%}%>
+                
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="card-body">
+        <%if(Object.keys(persons).length> 0 ){%>
+            <table class="table table-bordered">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Altura (cm)</th>
+                    <th>Peso (kg)</th>
+                    <th>Col Cabello</th>
+                    <th>Col Piel</th>
+                    <th>Col Ojos</th>
+                    <th>Año de Nacimiento</th>
+                    <th>Genero</th>
+                    <th>Planeta Oringen</th>
+                    <th>Especie</th>
+                </thead>
+                <tbody>
+                    <%persons.forEach(person=> { %>
+                        <tr>
+                            <td>
+                                <%=person.name%>
+                            </td>
+                            <td>
+                                <%=person.height%>
+                            </td>
+                            <td>
+                                <%=person.mass%>
+                            </td>
+                            <td>
+                                <%=person.hair_color%>
+                            </td>
+                            <td>
+                                <%=person.skin_color%>
+                            </td>
+                            <td>
+                                <%=person.eye_color%>
+                            </td>
+                            <td>
+                                <%=person.birth_year%>
+                            </td>
+                            <td>
+                                <%=person.gender%>
+                            </td>
+                            <td>
+                                <%=person.homeworld%>
+                            </td>
+                            <td>
+                                <%=person.species%>
+                            </td>
+                        </tr>
 
 
-                            <%})%>
-                    </tbody>
-                </table>
+                        <%})%>
+                </tbody>
+            </table>
 
-                <%}else{%>
-                    <h2 style="color: darkred;">No se Recibieron Registros 
-                    </h2>
+            <%}else{%>
+                <h2 style="color: darkred;">No se Recibieron Registros
+                </h2>
                 <%}%>
 
-        </div>
-    
+    </div>
+
 
     <div class="card-footer">
         <%-include('templates/footer')%>
@@ -76,4 +96,5 @@
 
 
 </body>
+
 </html>
