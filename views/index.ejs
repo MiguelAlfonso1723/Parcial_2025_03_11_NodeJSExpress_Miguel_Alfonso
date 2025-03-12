@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('templates/header')%>
+</head>
+<body>
+
+    <h1>Personajes de Star Wars</h1>
+        <div class="card-body">
+            <%if(Object.keys(persons).length> 0 ){%>
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Altura</th>
+                        <th>Peso</th>
+                        <th>Col Cabello</th>
+                        <th>Col Piel</th>
+                        <th>Col Ojos</th>
+                        <th>Año de Nacimiento</th>
+                        <th>Genero</th>
+                        <th>Planeta Oringen</th>
+                        <th>Especie</th>
+                    </thead>
+                    <tbody>
+                        <%persons.forEach(person=> { %>
+                            <tr>
+                                <td>
+                                    <%=person.name%>
+                                </td>
+                                <td>
+                                    <%=person.height%>
+                                </td>
+                                <td>
+                                    <%=person.mass%>
+                                </td>
+                                <td>
+                                    <%=person.hair_color%>
+                                </td>
+                                <td>
+                                    <%=person.skin_color%>
+                                </td>
+                                <td>
+                                    <%=person.eye_color%>
+                                </td>
+                                <td>
+                                    <%=person.birth_year%>
+                                </td>
+                                <td>
+                                    <%=person.gender%>
+                                </td>
+                                <td>
+                                    <%=person.homeworld%>
+                                </td>
+                                <td>
+                                    <%=person.species%>
+                                </td>
+                            </tr>
+
+
+                            <%})%>
+                    </tbody>
+                </table>
+
+                <%}else{%>
+                    <h2 style="color: darkred;">No se Recibieron Registros 
+                    </h2>
+                <%}%>
+
+        </div>
+    
+
+    <div class="card-footer">
+        <%-include('templates/footer')%>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "parcial_2025_03_11_nodejsexpress_miguel_alfonso",
+  "version": "1.0.0",
+  "description": "Parcial NodeJs Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelAlfonso1723/Parcial_2025_03_11_NodeJSExpress_Miguel_Alfonso.git"
+  },
+  "author": "Miguel Alfonso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiguelAlfonso1723/Parcial_2025_03_11_NodeJSExpress_Miguel_Alfonso/issues"
+  },
+  "homepage": "https://github.com/MiguelAlfonso1723/Parcial_2025_03_11_NodeJSExpress_Miguel_Alfonso#readme",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "keywords": []
+}
