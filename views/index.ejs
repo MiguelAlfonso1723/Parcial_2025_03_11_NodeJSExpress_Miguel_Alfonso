@@ -9,22 +9,25 @@
 
     <h1>Personajes de Star Wars</h1>
     <div>
-        <div class="col-md-3">
-            <label for="planet" class="form-label">Buscar Planeta</label>
-            <input type="text" id="idUser" name="planet" class="form-control" />
-        </div>
-        <div class="col-md-3">
-            <label for="specie" class="form-label">Planeta</label>
-            <select class="form-select" id="specie" name="specie">
-                <option selected disabled value="">Choose...</option>
-                <%if(species.size> 0 ){%>
-                    <% species.forEach(specie => { %>
-                        <option><%=specie%></option>
-                    <%})%>
-                <%}%>
+        <form action="/" method="post" class="row g-3">
+            <div class="col-md-3">
+                <label for="planet" class="form-label">Buscar Planeta</label>
+                <input type="text" id="planet" name="planet" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <label for="specie" class="form-label">Planeta</label>
+                <select class="form-select" id="specie" name="specie">
+                    <option selected disabled value="">Choose...</option>
+                    <%if(species.size> 0 ){%>
+                        <% species.forEach(specie => { %>
+                            <option><%=specie%></option>
+                        <%})%>
+                    <%}%>
                 
-            </select>
-        </div>
+                </select>
+            </div>
+           
+        </form>
     </div>
     <br>
     <div class="card-body">

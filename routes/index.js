@@ -20,5 +20,4 @@ route.get('/', (req, res) => {
 })
 
 
-
 export default route
